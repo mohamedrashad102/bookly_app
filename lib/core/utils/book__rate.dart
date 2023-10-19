@@ -8,6 +8,7 @@ class BookRate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
         Icon(
           Icons.star,
