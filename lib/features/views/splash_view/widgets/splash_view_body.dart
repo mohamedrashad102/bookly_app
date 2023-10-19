@@ -1,6 +1,6 @@
-import 'package:bookly_app/features/views/home_view/home_view.dart';
+import 'package:bookly_app/core/utils/app_routes.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 import 'logo_image.dart';
 import 'sliding_text.dart';
@@ -71,7 +71,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void navigateToHomeView() {
     Future.delayed(
       const Duration(seconds: 2),
-      () => Get.to(const HomeView(), transition: Transition.fade),
+      () => context.go(AppRoutes.kHomeView),
     );
   }
 
