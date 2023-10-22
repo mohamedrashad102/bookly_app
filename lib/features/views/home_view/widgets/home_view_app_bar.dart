@@ -1,4 +1,4 @@
-import 'package:bookly_app/core/utils/assets.dart/my_assets.dart';
+import 'package:bookly_app/core/utils/my_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -15,7 +15,9 @@ class HomeAppBar extends StatelessWidget {
         ),
         const Spacer(),
         IconButton(
-          onPressed: () {},
+          onPressed: () async {
+           
+          },
           icon: const Icon(
             FontAwesomeIcons.magnifyingGlass,
             size: 20,
