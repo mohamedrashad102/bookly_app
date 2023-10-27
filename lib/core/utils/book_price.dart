@@ -9,7 +9,7 @@ class BookPrice extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomText(
-      '19.99 €',
+      'Free',
       fontWeight: FontWeight.bold,
       color: blackColor ? Colors.black : Colors.white,
     );

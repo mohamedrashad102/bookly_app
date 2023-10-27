@@ -1,4 +1,4 @@
-import 'package:bookly_app/features/data/repos/home_repo.dart';
+import 'package:bookly_app/features/data/repos/home_repo/home_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'newest_books_states.dart';

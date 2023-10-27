@@ -1,19 +1,16 @@
+import 'package:bookly_app/core/utils/book_image.dart';
+import 'package:bookly_app/features/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 class HomeFeaturedBookItem extends StatelessWidget {
-  const HomeFeaturedBookItem({super.key});
-
+  const HomeFeaturedBookItem({super.key, required this.currentBook});
+  final BookModel currentBook;
   @override
   Widget build(BuildContext context) {
-    const String src =
-        'https://thumbs.dreamstime.com/b/grasmere-early-autumn-3391390.jpg';
-    return Container(
-      width: 140,
-      height: double.infinity,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(13),
-          image: const DecorationImage(image: NetworkImage(src))),
-      // child: Image.network(src),
+    final String src = currentBook.volumeInfo.imageLinks.thumbnail;
+    return SizedBox(
+      height: 200,
+      child: BookImage(src: src),
     );
   }
 }

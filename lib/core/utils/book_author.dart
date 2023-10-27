@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 import 'custom_text.dart';
 
 class BookAuthor extends StatelessWidget {
-  const BookAuthor({super.key});
+  const BookAuthor({super.key, required this.bookAuthor});
+  final String bookAuthor;
 
   @override
   Widget build(BuildContext context) {
-    return const CustomText(
-            'J.K. Rowling',
-            color: Colors.grey,
-            fontSize: 12,
-            fontWeight: FontWeight.bold,
-          );
+    return CustomText(
+      bookAuthor,
+      color: Colors.grey,
+      fontSize: 12,
+      fontWeight: FontWeight.bold,
+    );
   }
 }

@@ -2,27 +2,32 @@ import 'package:flutter/material.dart';
 
 import 'custom_text.dart';
 
-class BookRate extends StatelessWidget {
-  const BookRate({super.key});
-
+class BookRateAndCount extends StatelessWidget {
+  const BookRateAndCount({
+    super.key,
+    required this.averageRating,
+    required this.ratingsCount,
+  });
+  final num averageRating;
+  final int ratingsCount;
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(
+        const Icon(
           Icons.star,
           color: Colors.yellow,
           size: 14,
         ),
-        SizedBox(width: 2),
+        const SizedBox(width: 2),
         CustomText(
-          '4.8',
+          averageRating.toString(),
           fontSize: 14,
         ),
-        SizedBox(width: 5),
+        const SizedBox(width: 5),
         CustomText(
-          '(2390)',
+          ratingsCount.toString(),
           fontSize: 12,
           color: Colors.grey,
         ),
